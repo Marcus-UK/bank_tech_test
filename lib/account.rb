@@ -2,8 +2,13 @@ class Account
 
   attr_reader :balance, :transactions
 
-  def initialize(transactions = Transaction.new)
+  def initialize(transaction = Transaction.new)
   @balance = 0
-  @transactions = transactions
+  @transaction = transaction
+  end
+
+  def payment(amount)
+    @transaction.payment(amount)
+    @balance += amount
   end
 end

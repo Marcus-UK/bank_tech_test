@@ -6,9 +6,11 @@ attr_reader :transactions
     @transactions = []
   end
 
-  def deposit_funds(amount)
+  def payment(amount)
     @payment = {amount: amount}
     @transactions << @payment
   end
+
+
 
 end
