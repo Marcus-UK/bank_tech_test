@@ -16,9 +16,6 @@ As a customer,
 So that I can access my money,
 I want to be able to withdraw money.
 
-As a customer,
-So that I can see my balance,
-I want to be able to print my balance.
 
 As a customer,
 So that I can keep track of my account activity,
@@ -36,5 +33,3 @@ To see this project in action, Please follow these steps:
 
   1. Clone this repository.
   2. From your terminal, run irb and run the following commands:
-
-  
