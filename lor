@@ -1,0 +1,33 @@
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m
+
+Failures:
+
+  1) Account#show_statement displays a list of transactions along with a header
+     [31mFailure/Error:[0m
+     [31m  [0m[32mexpect[0m{ account.show_statement }.to output([31m[1;31m"[0m[31mdate || credit || debit || balance[1;35m\n[0m[31m[1;31m"[0m[31m[0m +[0m
+     [31m  [0m[31m[1;31m"[0m[31m01/11/2017 || || -300 || 300[1;35m\n[0m[31m[1;31m"[0m[31m[0m +[0m
+     [31m  [0m[31m[1;31m"[0m[31m01/11/2017 || 500 || || 600[1;35m\n[0m[31m[1;31m"[0m[31m[0m +[0m
+     [31m  [0m[31m[1;31m"[0m[31m01/11/2017 || 100 || || 100[1;35m\n[0m[31m[1;31m"[0m[31m[0m).to_stdout[0m
+     [31m[0m
+     [31m  expected block to output "date || credit || debit || balance\n01/11/2017 || || -300 || 300\n01/11/2017 || 500 || || 600\n01/11/2017 || 100 || || 100\n" to stdout, but output "date || credit || debit || balance\n01/11/2017 || || -300 || 300\n \n01/11/2017 || 500 || || 600\n \n01/11/2017 || 100 || || 100\n \n"[0m
+     [31m  Diff:[0m[0m
+     [31m  [0m[0m[0m
+     [31m  [0m[0m[0m
+     [31m  [0m[34m@@ -1,5 +1,8 @@[0m
+     [31m  [0m[0m date || credit || debit || balance[0m
+     [31m  [0m[0m 01/11/2017 || || -300 || 300[0m
+     [31m  [0m[32m+ [0m
+     [31m  [0m[0m 01/11/2017 || 500 || || 600[0m
+     [31m  [0m[32m+ [0m
+     [31m  [0m[0m 01/11/2017 || 100 || || 100[0m
+     [31m  [0m[32m+ [0m
+     [31m  [0m[0m
+     [36m# ./spec/account_spec.rb:32:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.06604 seconds (files took 0.35449 seconds to load)
+[31m8 examples, 1 failure[0m
+
+Failed examples:
+
+[31mrspec ./spec/account_spec.rb:31[0m [36m# Account#show_statement displays a list of transactions along with a header[0m
+

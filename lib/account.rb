@@ -13,5 +13,21 @@ class Account
     amount
   end
 
+  def show_statement
+    puts "date || credit || debit || balance"
+    create_statement
+  end
 
+
+  private
+
+  def create_statement
+    @transaction.transactions.reverse.each do |transaction|
+      if transaction[:amount] > 0
+        puts "#{transaction[:date]} || #{transaction[:amount]} || || #{transaction[:balance]}\n "
+      else
+        puts "#{transaction[:date]} || || #{transaction[:amount]} || #{transaction[:balance]}\n "
+      end
+    end
+  end
 end

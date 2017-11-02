@@ -4,8 +4,8 @@ class Transaction
 
 attr_reader :transactions
 
-  def initialize
-    @transactions = []
+  def initialize(transactions = [])
+    @transactions = transactions
   end
 
   def payment(amount, date = transaction_date)
@@ -24,7 +24,7 @@ private
   end
 
   def calculate_balance
-    balance = @transactions.sum {|element| element[:amount]}
+    balance = @transactions.sum {|transaction| transaction[:amount]}
     @transactions[-1][:balance] = balance
   end
 

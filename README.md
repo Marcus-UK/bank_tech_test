@@ -4,7 +4,7 @@ Bank Tech test
 #My approach
 
 This is my submission for the Bank tech test. This implementation has been built
-using a TDD design pattern in Javascript. In order to meet the requirements of
+using a TDD design pattern in Ruby. In order to meet the requirements of
 the test, I have relied on the following user stories:
 
 ```
