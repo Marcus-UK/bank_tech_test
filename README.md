@@ -21,15 +21,3 @@ As a customer,
 So that I can keep track of my account activity,
 I want to be able to print off an account statement with dated transactions.
 ```
-
-#Code structure
-
-The code is structured with object orientated principles in mind.
-
-
-# Running this project
-
-To see this project in action, Please follow these steps:
-
-  1. Clone this repository.
-  2. From your terminal, run irb and run the following commands:
