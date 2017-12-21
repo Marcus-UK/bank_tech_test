@@ -24,9 +24,9 @@ class Account
   def create_statement
     @transaction.transactions.reverse.each do |transaction|
       if transaction[:amount] > 0
-        puts "#{transaction[:date]} || #{transaction[:amount]} || || #{transaction[:balance]}\n "
+        puts "#{transaction[:date]} || #{transaction[:amount]} || || #{transaction[:balance]}"
       else
-        puts "#{transaction[:date]} || || #{transaction[:amount]} || #{transaction[:balance]}\n "
+        puts "#{transaction[:date]} || || #{transaction[:amount]} || #{transaction[:balance]}"
       end
     end
   end
